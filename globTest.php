@@ -1,6 +1,12 @@
 <?php
 
-$intervals = readline('enter your intervals: ');
+// Using a CLI, run php globTest.php and start testing,
+
+/*  Question 1: la fonction accepte un tableau des intervalles en paramètre,
+ et retourne an tableau des intervalles qui represente toute les intervalles possible avec ordre croissant en fusionnant ceux qui intersecte */
+
+/* Question 2: */
+$intervals = readline('enter your array of intervals: ');
 
 do {
     echo '--------------------> result: ' .
@@ -17,10 +23,8 @@ function convertArray($intervals)
         $intervals,
         function ($a, $b) {
             return $a[0] <=> $b[0];
-        } 
+        }
     );
-
-    return json_encode($intervals);
 
     // set result intervals to first interval of sorted intervals
     $result = [$intervals[0]];
@@ -39,3 +43,6 @@ function convertArray($intervals)
 
     return json_encode($result);
 }
+
+
+/* Question 3: 1H 30min */
